@@ -13,7 +13,6 @@ dbUrl = 'https://kookoosocialhack.firebaseio.com/'
 
 @app.route('/<master>')
 def home(master):
-	remDbg(flask.request.url)
 	if not constant_time_compare(master, master_key):
 		return 'Tough luck buddy! ^_^'
 	
@@ -80,7 +79,6 @@ def newSms():
 			koomsg(message)
 		except Exception as e:
 			print(e)
-			remDbg('Invalid SMS request: ' + message)
 			sendSms(cid, 'Invalid KooTweet request!\nExample:\nkootweet gettweets 3\nkootweet gettweets 3 @username\nkootweet gettweets 3 #hashtag\nkootweet gettweets 3 your_query')
 			return flask.jsonify(success=False, message='gettweets failed!')
 	else:
