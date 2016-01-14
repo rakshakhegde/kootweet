@@ -2,9 +2,9 @@
 
 A highly scalable, NoSQL based, KooKoo app to securely call or text to directly tweet without any password. Also one can read tweets via incoming text based on username, hashtag or any other search query.
 
-Disclaimer: You are solely responsible for maintaining confidentiality of the URL sent via SMS and of the secret keys embedded in them. I, Rakshak R.Hegde, am not liable for any loss, direct or indirect, occured to you by using this application.
+> Disclaimer: You are solely responsible for maintaining confidentiality of the URL sent via SMS and of the secret keys embedded in them. I, Rakshak R.Hegde, am not liable for any loss, direct or indirect, occured to you by using this application.
 
-Call **08067947419** to start KooTweet'ing.
+Call **08067947419** to start KooTweet'ing. Due to Kookoo restrictions, only allowed between 9am - 9pm.
 
 ## Requirements to setup
 - Python 2 or 3
@@ -15,7 +15,7 @@ Call **08067947419** to start KooTweet'ing.
 - Google Cloud Services Account for Google's URL Shortener API access
 
 ## KooTweet Application Flow
-For the code flow, one can start tracing from flaskapp.py and delve into hacks/kootweet/__init__.py for the actual Kookoo app. The static files (css, js and images) for the html file is stored in the dir at root called 'static/'.
+For the code flow, one can start tracing from flaskapp.py and delve into hacks/kootweet/\__init__.py for the actual Kookoo app. The static files (css, js and images) for the html file is stored in the dir at root called 'static/'.
 
 When a new user calls:
 - User is greeted and a personal secret SMS is sent which contains their secret key. This key prevents everyone from posting as someone else. This SMS is not be shared with anyone and the URL needs to be kept safely.
@@ -31,19 +31,21 @@ When a user sends an SMS to **09227507512**:
 
 ## SMS formats
 Send SMS to **09227507512** in one of the following formats:
+```
+kootweet {your custom message} : Updates your Twitter status to 'your message'.
+Ex: kootweet KooTweet is rad :D
 
-kootweet {your custom message} : Updates your Twitter status to 'your message'. Ex: kootweet KooTweet is rad :D
+kootweet gettweets : Gets 4 neatly formatted tweets from your home feed
 
-kootweet gettweets : Gets 20 neatly formatted tweets from your home feed
-
-kootweet gettweets {number} : Gets the specified number of tweets from your home feed. Ex: kootweet gettweets 3
+kootweet gettweets {number} : Gets the specified number of tweets from your home feed.
+Ex: kootweet gettweets 3
 
 kootweet gettweets {number} {query} : Gets the specified number of tweets from.
 Examples:
 For username:		kootweet gettweets 3 @venturesity
 For hashtag:		kootweet gettweets 3 #KooTweetApp
 For general query:	kootweet gettweets 3 kookoo
-
+```
 Keep the {number} as low as possible because Kookoo cannot handle SMSs with large text. number less than 4 for testing purposes should be fine.
 
 ## Highlights of Tech used
@@ -54,4 +56,4 @@ Keep the {number} as low as possible because Kookoo cannot handle SMSs with larg
 - For the web frontend - MaterializeCSS has been used
 - Complete Twitter API integration
 - Google URL Shortener to shorten URLs sent in SMSs and in tweets
-- Minor attack prevention: Master key is check using custom constant_compare_time function to prevent Timing Attacks to prevent Master key from getting stolen.
+- Minor attack prevention: Master key is check using custom *constant_compare_time* function to prevent Timing Attacks to prevent Master key from getting stolen.
