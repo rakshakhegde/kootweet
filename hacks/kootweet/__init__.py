@@ -54,7 +54,7 @@ def newCall():
 		response = ET.Element('response', {'filler': 'yes'})
 		ET.SubElement(response, 'playtext').text = 'Welcome to Koo Tweet. Press hash to stop recording.'
 		import time, random
-		ET.SubElement(response, 'record', {'maxduration': '60'}).text = str(time.time()) + str(random.random())
+		ET.SubElement(response, 'record', {'maxduration': '120'}).text = str(time.time()) + str(random.random())
 		ET.SubElement(response, 'playtext').text = 'Koo Tweet posting'
 	else:
 		response = ET.Element('response')
