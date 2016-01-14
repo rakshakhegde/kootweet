@@ -1,0 +1,6 @@
+kookoo_api_key = 'xxxx'
+db_admin_secret = 'xxxx'
+urlshortener_apikey = 'xxxx'
+twitter_api_key = 'xxxx'
+twitter_api_secret = 'xxxx'
+master_key = 'xxxx'
