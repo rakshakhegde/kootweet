@@ -66,7 +66,7 @@ def newCall():
 def record():
 	recordingUrl = shortUrl(unquote(params.get('data')))
 	status = 'Listen to my KooTweet ' + recordingUrl + '\n@OzonetelSystems @venturesity #KooTweetApp'
-	postTweet(status, token)
+	postTweet(status)
 	response = ET.Element('response')
 	ET.SubElement(response, 'playtext').text = 'Have a nice day'
 	ET.SubElement(response, 'hangup')
