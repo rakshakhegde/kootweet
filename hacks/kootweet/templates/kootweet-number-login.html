@@ -20,17 +20,22 @@
 		strong {
 			font-weight: bold;
 		}
+		
+		iframe {
+			margin-top: 8px;
+		}
 
 	</style>
 </head>
 
 <body>
 	<div class="container">
+		<iframe src="https://ghbtns.com/github-btn.html?user=rakshakhegde&repo=kootweet&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 		<h3 class="center-align light">KooTweet</h3>
 		<h5 class="center-align grey-text">Kookoo Social Media Challenge Hack</h5>
 		<p class="center-align">Your Contact: {{ number }}</p>
 		<div id="login-section" class="row center-align">
-			<p class="card-panel">Log-in to start tweeting via calls offline</p>
+			<p>Log-in to start tweeting via calls offline</p>
 			<button id="login" class="btn-large waves-effect waves-light blue"><img src="/images/twitter_mini_logo.png" style="vertical-align:middle; margin-right:12px;" />Login</button>
 		</div>
 		<div id="logged-in-section" class="row center-align">
@@ -47,11 +52,20 @@
 				<div class="collapsible-header">KooTweet SMS formats</div>
 				<div class="collapsible-body">
 					<p>Send an SMS in any of the following formats to <span class="blue-text">09227507512</span>
-					<br/><strong>kootweet {your custom message}</strong> : Updates your Twitter status to 'your message'.
-					<br/><strong>kootweet gettweets</strong> : Gets 20 neatly formatted tweets from your home feed.
-					<br/><strong>kootweet gettweets {number}</strong> : Gets the specified number of tweets from your home feed.
-					<br/><strong>kootweet gettweets {number} {username}</strong> : Gets the specified number of tweets from "username"'s feed.
-					<br/>Ex: kootweet gettweets 10 rakshakhegde
+						<br/>
+						<br/><strong>kootweet {your custom message}</strong> : Updates your Twitter status to 'your message'.
+						<br/>Ex: kootweet KooTweet is rad :D
+						<br/>
+						<br/><strong>kootweet gettweets</strong> : Gets 4 neatly formatted tweets from your home feed.
+						<br/>
+						<br/><strong>kootweet gettweets {number}</strong> : Gets the specified number of tweets from your home feed.
+						<br/>Ex: kootweet gettweets 3
+						<br/>
+						<br/><strong>kootweet gettweets {number} {username}</strong> : Gets the specified number of tweets with the given query.
+						<br/>Examples:
+						<br/>For username:		kootweet gettweets 3 @venturesity
+						<br/>For hashtag:		kootweet gettweets 3 #KooTweetApp
+						<br/>For general query:	kootweet gettweets 3 kookoo
 					</p>
 				</div>
 			</li>

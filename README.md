@@ -40,7 +40,7 @@ kootweet gettweets : Gets 4 neatly formatted tweets from your home feed
 kootweet gettweets {number} : Gets the specified number of tweets from your home feed.
 Ex: kootweet gettweets 3
 
-kootweet gettweets {number} {query} : Gets the specified number of tweets from.
+kootweet gettweets {number} {query} : Gets the specified number of tweets with the given query.
 Examples:
 For username:		kootweet gettweets 3 @venturesity
 For hashtag:		kootweet gettweets 3 #KooTweetApp
@@ -56,4 +56,4 @@ Keep the {number} as low as possible because Kookoo cannot handle SMSs with larg
 - For the web frontend - MaterializeCSS has been used
 - Complete Twitter API integration
 - Google URL Shortener to shorten URLs sent in SMSs and in tweets
-- Minor attack prevention: Master key is check using custom *constant_compare_time* function to prevent Timing Attacks to prevent Master key from getting stolen.
+- Minor attack prevention: Master key is checked using custom *constant_compare_time* function to prevent Timing Attacks to prevent Master key from getting stolen.
