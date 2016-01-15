@@ -3,8 +3,8 @@ import flask
 app = flask.Flask(__name__)
 app.config.from_pyfile('flaskapp.cfg')
 
-import hacks.kookoosocialmedia
-app.register_blueprint(hacks.kookoosocialmedia.app, url_prefix='/kookoosocialmedia')
+import hacks.kootweet
+app.register_blueprint(hacks.kootweet.app, url_prefix='/kootweet')
 
 @app.route('/')
 def home():
