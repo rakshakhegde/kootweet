@@ -4,7 +4,7 @@ A highly scalable, NoSQL based, KooKoo app to securely call or text to directly 
 
 > Disclaimer: You are solely responsible for maintaining confidentiality of the URL sent via SMS and of the secret keys embedded in them. I, Rakshak R.Hegde, am not liable for any loss, direct or indirect, occured to you by using this application.
 
-Call **08067947419** to start KooTweet'ing. Due to Kookoo restrictions, only allowed between 9am - 9pm.
+Call **08067947419** to start KooTweet'ing. Due to Kookoo restrictions, DND (Do Not Disturb) should be disabled and the complete app will work only between 9am - 9pm.
 
 ## Requirements to setup
 - Python 2 or 3
